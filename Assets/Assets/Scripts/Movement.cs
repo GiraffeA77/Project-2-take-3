@@ -34,16 +34,14 @@ public class Movement : MonoBehaviour
             // increment the game object's translation
             transform.Translate(0, 0, -0.1f);
 
-        // translate by 0.1m to the left on X axis each frame for as long as
-        // the A key is held down
-        if (Input.GetKey (KeyCode.A))
-            // increment the game object's translation
-            transform.Translate(-0.1f, 0, 0);
+        // Rotate by 1 degree on Y axis each frame for as long as the A key is held down
+        if (Input.GetKey(KeyCode.A))
+            // Rotate the game object to the left
+            transform.Rotate(Vector3.up, -0.1f);
 
-       // translate by 0.1m to the left on X axis each frame for as long as
-        // the D key is held down
-        if (Input.GetKey (KeyCode.D))
-            // increment the game object's translation
-            transform.Translate(0.1f, 0, 0);
+        // Rotate by 1 degree on Y axis each frame for as long as the D key is held down
+        if (Input.GetKey(KeyCode.D))
+            // Rotate the game object to the right
+            transform.Rotate(Vector3.up, 0.1f);
     }
 }
