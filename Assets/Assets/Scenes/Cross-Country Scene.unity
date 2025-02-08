@@ -451,18 +451,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1522369321}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1180926987 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1397185225954018, guid: 5d68a55fb8691f74dbda8f0e7d28977e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1522369321}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1194357607 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1521307180114710, guid: 5d68a55fb8691f74dbda8f0e7d28977e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1522369321}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1416425235
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,13 +594,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   springs:
-  - {fileID: 1194357607}
-  - {fileID: 1180926987}
   - {fileID: 1544321397}
   - {fileID: 1007934756}
-  b2: {fileID: 1522369325}
-  prop: {fileID: 1701346392}
-  CM: {fileID: 1522369323}
+  rb: {fileID: 1522369325}
+  prop: {fileID: 1544321397}
+  CM: {fileID: 1007934756}
 --- !u!54 &1522369325
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -732,12 +718,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698502331}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1701346392 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1095905934652820, guid: 5d68a55fb8691f74dbda8f0e7d28977e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1522369321}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1741039100
 GameObject:
   m_ObjectHideFlags: 0
