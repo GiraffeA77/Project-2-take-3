@@ -4,44 +4,41 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Hint: The global static variable "Terrain.activeTerrain" 
-        // may be helpful or have useful methods for user here or in
-        // other scripts.
+        Vector3 position = transform.position;
+
+        // Get the active terrain
         Terrain terrain = Terrain.activeTerrain;
 
-        Vector3 position = transform.position;
-        
-        // set the game object's translation (not an increment)
+        // Set the game object's position
         transform.position = position;
 
-        // translate by 0.1m on Z axis each frame for as long as
-        // the W key is held down
-        if (Input.GetKey (KeyCode.W))
-            // increment the game object's translation
+        // Translate by 0.1m on Z axis each frame for as long as the W key is held down
+        if (Input.GetKey(KeyCode.W))
+            // Increment the game object's translation
             transform.Translate(0, 0, 0.1f);
 
-        // translate by 0.1m backwards on Z axis each frame for as long as
-        // the S key is held down
-        if (Input.GetKey (KeyCode.S))
-            // increment the game object's translation
+        // Translate by 0.1m backwards on Z axis each frame for as long as the S key is held down
+        if (Input.GetKey(KeyCode.S))
+            // Increment the game object's translation
             transform.Translate(0, 0, -0.1f);
 
         // Rotate by 1 degree on Y axis each frame for as long as the A key is held down
         if (Input.GetKey(KeyCode.A))
             // Rotate the game object to the left
-            transform.Rotate(Vector3.up, -0.1f);
+            transform.Rotate(Vector3.up, -1.0f);
 
         // Rotate by 1 degree on Y axis each frame for as long as the D key is held down
         if (Input.GetKey(KeyCode.D))
             // Rotate the game object to the right
-            transform.Rotate(Vector3.up, 0.1f);
+            transform.Rotate(Vector3.up, 1.0f);
+
+        float moveVertical = Input.GetAxis("Vertical") * Time.deltaTime;
+        transform.Translate(0, 0, moveVertical);
     }
 }
