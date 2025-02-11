@@ -4,55 +4,32 @@ using UnityEngine;
 
 public class ToggleBetweenCars : MonoBehaviour
 {
-    public GameObject[] hovercrafts; 
-    public Camera mainCamera; 
-    private int currentIndex = 0;
+     public Camera camera1;
+    public Camera camera2;
+    public Camera camera3;
+
+    private int currentCameraIndex;
 
     void Start()
     {
-        if (hovercrafts.Length == 0)
-        {
-            Debug.LogError("No hovercrafts assigned to the ToggleBetweenCars script!");
-            return;
-        }
-
-        ActivateHovercraft(currentIndex); 
+        // Start with the first camera enabled, and others disabled
+        currentCameraIndex = 0;
+        camera1.enabled = true;
+        camera2.enabled = false;
+        camera3.enabled = false;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) && hovercrafts.Length > 1)
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            SwitchToNextHovercraft();
-        }
-    }
+            // Switch to the next camera
+            currentCameraIndex = (currentCameraIndex + 1) % 3;
 
-    void SwitchToNextHovercraft()
-    {
-        
-        hovercrafts[currentIndex].SetActive(false);
-
-        
-        currentIndex = (currentIndex + 1) % hovercrafts.Length;
-
-        
-        ActivateHovercraft(currentIndex);
-    }
-
-    void ActivateHovercraft(int index)
-    {
-        hovercrafts[index].SetActive(true);
-
-        
-        Camera hovercraftCamera = hovercrafts[index].GetComponentInChildren<Camera>();
-        if (hovercraftCamera != null)
-        {
-            mainCamera.gameObject.SetActive(false);
-            hovercraftCamera.gameObject.SetActive(true);
-        }
-        else
-        {
-            mainCamera.gameObject.SetActive(true);
+            // Enable the current camera and disable the others
+            camera1.enabled = (currentCameraIndex == 0);
+            camera2.enabled = (currentCameraIndex == 1);
+            camera3.enabled = (currentCameraIndex == 2);
         }
     }
 }
