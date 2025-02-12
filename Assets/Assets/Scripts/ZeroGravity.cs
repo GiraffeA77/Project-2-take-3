@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class ZeroGravity : MonoBehaviour
 {
-    public Rigidbody rb;
+    public float movementSpeed = 10f;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,12 @@ public class ZeroGravity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+        float forwardInput = Input.GetAxis("Vertical");
+        float strafeInput = Input.GetAxis("Horizontal");
+
+        Vector3 movementVector = transform.forward * forwardInput + transform.right * strafeInput;
+        movementVector = Vector3.Normalize(movementVector) * movementSpeed;
+
+        rb.velocity = movementVector;
     }
 }
