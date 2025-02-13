@@ -1407,6 +1407,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4220266609505564363, guid: ecfd29dfc3f76e7499647b82a70d59a6,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220266609505564363, guid: ecfd29dfc3f76e7499647b82a70d59a6,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220266609505564363, guid: ecfd29dfc3f76e7499647b82a70d59a6,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220266609505564363, guid: ecfd29dfc3f76e7499647b82a70d59a6,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecfd29dfc3f76e7499647b82a70d59a6, type: 3}
 --- !u!4 &1829033382 stripped
@@ -1513,3 +1533,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b397197f015549b4f9a0bae7b7f2f5e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2049490061 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1403823821897938, guid: 0fdf72db57d893449a3a9a07173850fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 824422370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &2049490064
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049490061}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 90
+  m_CollisionDetection: 1
