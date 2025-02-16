@@ -1763,7 +1763,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.447805, y: 3.773876, z: 9.374084}
+  m_Size: {x: 4.447805, y: 4.773876, z: 9.374084}
   m_Center: {x: -0.00000016731128, y: -0.7170687, z: -0.0000020077355}
 --- !u!1 &2108634155 stripped
 GameObject:
