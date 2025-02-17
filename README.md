@@ -25,8 +25,7 @@ Matthew Rust
 - Created 2 additional cameras
 - Attached a camera to each car
 - Added Post Processing import
-- Created deceleration audio
-- Applied all audio as neccesary
+- Created and applied deceleration audio
 
 Sam Dalton
 - Created and applied colliders to cars.
