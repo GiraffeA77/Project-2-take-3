@@ -46,7 +46,7 @@ Samiur Rhahmen
 # Installation process
 - copy/paste folder in zip file to desired location.
 - Open Unity hub
-- Click open and add from disk (dolder should be called Project-2-take-3-main
+- Click open and add from disk (folder should be called Project-2-take-3-main
 - Open project 
 - In the asset terminal navigate to the following: Asset -> Scenes -> Cross-Country Scene
 - open and if nothing shows, may need to scroll up a bit in the scene view.
